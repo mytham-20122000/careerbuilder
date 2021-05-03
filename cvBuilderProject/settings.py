@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '^3#&)ku3athl-k1m_!_m$29d4ays%y6i(+woh=a5h#&g#os52s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mytham-20122000-careerbuilder-5605.zeet.app']
 
 
 # Application definition
