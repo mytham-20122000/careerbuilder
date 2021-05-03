@@ -1,0 +1,16 @@
+{% extends "main.ejs" %}
+
+{% block content %}
+  <h1>Danh Sách việc làm:</h1>
+  {% if skilljob_list %}
+  <ul>
+    {% for skilljob in skilljob_list %}
+      <li>
+        <a href="{{ skilljob.get_absolute_url }}">{{ skilljob.ten_ky_nang_job }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>Không có danh sách việc làm nào.</p>
+  {% endif %}
+{% endblock %}

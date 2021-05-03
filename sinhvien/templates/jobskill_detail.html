@@ -1,0 +1,15 @@
+{% extends "main.ejs" %}
+
+{% block content %}
+  <p><strong>Mã việc làm :</strong> <a href="">{{ job.ma_viec_lam }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Tên việc làm:</strong> {{ job.ten_viec_lam}}</p>
+  <!-- <p><strong>Tên kỹ năng:</strong> {{ job.ten_ky_nang}}</p>
+  <p><strong>Cấp độ:</strong> {{ job.cap_do}}</p> -->
+  <p><strong>Các Kỹ Năng Cần thiết</strong></p>
+  {% for skillchinh in job.skillchinh_set.all %}
+      <p>{{ skillchinh.ten_ky_nang_chinh }}</p>
+  {% endfor %}  <p><strong>Các Kỹ Năng Phụ</strong></p>
+  {% for skillphu in job.skillphu_set.all %}
+      <p>{{ skillphu.ten_ky_nang_phu }}</p>
+  {% endfor %}
+{% endblock %}

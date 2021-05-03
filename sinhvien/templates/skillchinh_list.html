@@ -1,0 +1,16 @@
+{% extends "sinhvien_base.html" %}
+
+{% block content %}
+  <h1>Danh Sách kỹ năng:</h1>
+  {% if skillchinh_list %}
+  <ul>
+    {% for skillchinh in skillchinh_list %}
+      <li>
+        <a href="{{ skillchinh.get_absolute_url }}">{{ skillchinh.ten_ky_nang_chinh }}</a>
+
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>Không có danh sách kỹ năng nào.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "main.ejs" %}
+
+{% block content %}
+  <h1>Danh Sách kỹ năng:</h1>
+  {% if educationprogram_list %}
+  <ul>
+    {% for skill in skill_list %}
+      <li>
+        <a href="{{ skill.get_absolute_url }}">{{ skill.ma_sinh_vien }}</a> ({{skill.ten_ky_nang}}) | ({{skill.cap_do}})
+      </li>
+      
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>Không có danh sách kỹ năng nào.</p>
+  {% endif %}
+{% endblock %}

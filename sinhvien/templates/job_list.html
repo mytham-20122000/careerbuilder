@@ -1,0 +1,14 @@
+{% block content %}
+  <h1>Danh Sách việc làm:</h1>
+  {% if job_list %}
+  <ul>
+    {% for job in job_list %}
+      <li>
+        <a href="{{ job.get_absolute_url }}">{{ job.ten_viec_lam }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>Không có danh sách việc làm nào.</p>
+  {% endif %}
+{% endblock %}

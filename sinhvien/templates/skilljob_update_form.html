@@ -1,0 +1,20 @@
+{% extends "main.ejs" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <table>
+
+
+      {{ form.ma_viec_lam | as_crispy_field }}
+      {{ form.ten_viec_lam | as_crispy_field }}
+      {{ form.ten_ky_nang | as_crispy_field }}
+      {{ form.cap_do | as_crispy_field }}
+
+    </table>
+    <input type="submit" value="Submit">
+  </form>
+
+
+{% endblock %}
